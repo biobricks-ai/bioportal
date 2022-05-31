@@ -149,12 +149,11 @@ removeEmptyTables<-function(inputPath){
 removeEmptyTables(extDownloadFolder)
 
 ##----------Generate README for select ontologies that don't require licenses: This includes ontologies in the top 100 visit datasets
-
 AccessBioportal=sapply(list.files(extDownloadFolder, pattern = '.rdf'),function(x) tools::file_path_sans_ext(x))
 selectOntologies=intersect(topVisitDatasets$ontologyName, AccessBioportal)
 selectTopVisitInfo=combinedDf[which(combinedDf$Acronym%in%selectOntologies),]
 htmlList=seq(1,length(selectTopVisitInfo$Acronym))
-write(c('# Bioportal Data Description','---','title: Bioportal','namespace: Bioportal','description: The database of Genotypes and Phenotypes (dbGaP) was developed to archive and distribute the data and results from studies that have investigated the interaction of genotype and phenotype in Humans.','dependencies:','  - name: dbGaP','  url: https://ftp.ncbi.nlm.nih.gov/dbgap/studies/','---'),"README.md")
+write(c('# Bioportal Data Description','---','title: Bioportal','namespace: Bioportal','description: A comprehenisive repository of biomedical ontologies','dependencies:','  - name: bioportal','    url: https://bioportal.bioontology.org/ontologies','---'),"README.md")
 write(c('','<a href="https://github.com/biobricks-ai/bioportal/actions"><img src="https://github.com/biobricks-ai/bioportal/actions/workflows/bricktools-check.yaml/badge.svg?branch=main"/></a>',''), "README.md", append = TRUE)
 for( i in htmlList){
   write(paste("### Ontology Data:",selectTopVisitInfo$Name[i], "(",selectTopVisitInfo$Acronym[i],")"),"README.md", append = TRUE)

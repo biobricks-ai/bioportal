@@ -2,10 +2,10 @@
 ---
 title: Bioportal
 namespace: Bioportal
-description: The database of Genotypes and Phenotypes (dbGaP) was developed to archive and distribute the data and results from studies that have investigated the interaction of genotype and phenotype in Humans.
+description: A comprehenisive repository of biomedical ontologies
 dependencies:
-  - name: dbGaP
-  url: https://ftp.ncbi.nlm.nih.gov/dbgap/studies/
+  - name: bioportal
+    url: https://bioportal.bioontology.org/ontologies
 ---
 
 <a href="https://github.com/biobricks-ai/bioportal/actions"><img src="https://github.com/biobricks-ai/bioportal/actions/workflows/bricktools-check.yaml/badge.svg?branch=main"/></a>
