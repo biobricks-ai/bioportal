@@ -1,4 +1,3 @@
-# Bioportal Data Description
 ---
 title: Bioportal
 namespace: Bioportal

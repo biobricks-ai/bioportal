@@ -153,7 +153,7 @@ AccessBioportal=sapply(list.files(extDownloadFolder, pattern = '.rdf'),function(
 selectOntologies=intersect(topVisitDatasets$ontologyName, AccessBioportal)
 selectTopVisitInfo=combinedDf[which(combinedDf$Acronym%in%selectOntologies),]
 htmlList=seq(1,length(selectTopVisitInfo$Acronym))
-write(c('# Bioportal Data Description','---','title: Bioportal','namespace: Bioportal','description: A comprehenisive repository of biomedical ontologies','dependencies:','  - name: bioportal','    url: https://bioportal.bioontology.org/ontologies','---'),"README.md")
+write(c('---','title: Bioportal','namespace: Bioportal','description: A comprehenisive repository of biomedical ontologies','dependencies:','  - name: bioportal','    url: https://bioportal.bioontology.org/ontologies','---'),"README.md")
 write(c('','<a href="https://github.com/biobricks-ai/bioportal/actions"><img src="https://github.com/biobricks-ai/bioportal/actions/workflows/bricktools-check.yaml/badge.svg?branch=main"/></a>',''), "README.md", append = TRUE)
 for( i in htmlList){
   write(paste("### Ontology Data:",selectTopVisitInfo$Name[i], "(",selectTopVisitInfo$Acronym[i],")"),"README.md", append = TRUE)
