@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  build:
+    cmd: Rscript R/build.R
+    deps:
+    - path: R/build.R
+      md5: a04570e2c5594a0c119c591a81f9e997
+      size: 3883
+    outs:
+    - path: data/
+      md5: 21b736ed6e6db0ddd959a0c54c7bd1bf.dir
+      size: 1318908420
+      nfiles: 182
+  download:
+    cmd: Rscript R/download.R
+    deps:
+    - path: R/chrome.R
+      md5: f9351e0f815482342d8a128d91f55290
+      size: 2680
+    - path: R/download.R
+      md5: a576884b5ddb72efae2393c90a8f77db
+      size: 6261
+    outs:
+    - path: README.md
+      md5: 55228f586faacc44933418096bd22ef4
+      size: 13260
+    - path: download/
+      md5: 985aa6a3dd87a08c33543e2d360ea4a1.dir
+      size: 150987
+      nfiles: 2
