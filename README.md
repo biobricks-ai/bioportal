@@ -1,5 +1,5 @@
 # Bioportal
-<a href="https://github.com/biobricks-ai/1000_Genomes/actions"><img src="https://github.com/biobricks-ai/1000_Genomes/actions/workflows/bricktools-check.yaml/badge.svg?branch=master"/></a>
+<a href="https://github.com/biobricks-ai/bioportal/actions"><img src="https://github.com/biobricks-ai/bioportal/actions/workflows/bricktools-check.yaml/badge.svg?branch=master"/></a>
 
 ## Description
 > A comprehenisive repository of biomedical ontologies
